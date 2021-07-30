@@ -2,6 +2,8 @@ const body = document.body
 const noteImg = document.querySelector(".noteImg")
 const randButton = document.getElementById("random")
 const checkContainer = document.querySelector(".checkContainer")
+const trebleButton = document.querySelector('#Treble');
+const bassButton = document.querySelector('#Bass');
 
 const images = [
     "G2",
@@ -93,6 +95,12 @@ randButton.addEventListener('click', () => {
     noteImg.src = "bcimgs/" + images[setImg(currentSelection)] + "bc.png"
 })
 
+trebleButton.addEventListener('click', (e) => {
+    setActive(e.target)
+})
+bassButton.addEventListener('click', (e) => {
+    setActive(e.target)
+})
 
 // Sets img source 
 const setImg = (current) => {
@@ -103,8 +111,18 @@ const setImg = (current) => {
         } else {
             currentSelection = selection
             return selection
-        }
-        
+        }   
     }
-    
+}
+
+const setActive = (button) => {
+    if (button.className == 'controls inactive'){
+        if(button.id == 'Treble'){
+            trebleButton.className = 'controls active'
+            bassButton.className = 'controls inactive'
+        } else {
+            trebleButton.className = 'controls inactive'
+            bassButton.className = 'controls active'
+        }
+    }
 }
