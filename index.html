@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Note Name Flashcards</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
     <div id="container">
+        <!-- <img class="deactivate noteImgFs" src="bcimgs/A2bc.png" alt=""> -->
         <h1>Note Naming Flashcards</h1>
         <div id="ui">
             <div class="uicontainer">
@@ -55,8 +58,10 @@
                     </div>
             </div>
             <div class="uicontainer">
-                <div id="display">
+                <div class="display">
                     <img class="noteImg" src="bcimgs/A2bc.png" alt="">
+                    <i class="fa fa-times deactivate"></i>
+                    <img class="displayFs deactivate" id="fsImage" src="bcimgs/A2bc.png" alt="">
                 </div>
             </div>
             <div id="buttoncontainer" class="uicontainer">
@@ -64,10 +69,14 @@
                     <button class="controls inactive" id="Treble">Treble</button>
                     <button class="controls active" id="Bass">Bass</button>
                 </div>
-                <button class="controls" id="random">Random</button>
+                <div>
+                    <button class="controls" id="random">Random</button>
+                    <button class="controls" id="fullscreen">Fullscreen</button>
+                </div>    
             </div>    
         </div>    
     </div>    
 </body>
+<script src="https://use.fontawesome.com/31cf92ec43.js"></script>
 <script src="main.js"></script>
 </html>

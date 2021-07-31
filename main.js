@@ -1,21 +1,25 @@
 const body = document.body
 const noteImg = document.querySelector(".noteImg")
-const randButton = document.getElementById("random")
+const noteImgFs = document.querySelector('.displayFs')
 const checkContainer = document.querySelector(".checkContainer")
+const xIcon = document.querySelector('.fa-times')
+
+const randButton = document.getElementById("random")
 const trebleButton = document.querySelector('#Treble');
 const bassButton = document.querySelector('#Bass');
+const fsButton = document.querySelector('#fullscreen')
 
 const images = [
-    "G2",
+"G2",
     "A2",
     "B2",
     "C3",
     "D3",
     "E3",
     "F3",
+    "G3",
     "A3",
     "B3",
-    "G3",
     "C4"
 ]
 
@@ -64,9 +68,7 @@ for (img in images) {
 
 const checkBoxes = document.querySelectorAll(".checkbox")
 
-const cStatus = () => {
-    console.log(checkStatus)
-}
+
 // Add event listener to checkboxes
 for (i = 0; i < checkBoxes.length; i++){
     checkBoxes[i].addEventListener('change', (e) => {
@@ -84,13 +86,14 @@ for (i = 0; i < checkBoxes.length; i++){
     })
 }
 
-
+//EVENT LISTENERS
 body.addEventListener('keyup', (e) => {
     if (e.code == "Space") {
         noteImg.src = "bcimgs/" + images[setImg(currentSelection)] + "bc.png"
+        noteImgFs.src = "bcimgs/" + images[setImg(currentSelection)] + "bc.png"
     }
 })
-
+//Button Listeners
 randButton.addEventListener('click', () => {
     noteImg.src = "bcimgs/" + images[setImg(currentSelection)] + "bc.png"
 })
@@ -100,6 +103,14 @@ trebleButton.addEventListener('click', (e) => {
 })
 bassButton.addEventListener('click', (e) => {
     setActive(e.target)
+})
+fsButton.addEventListener('click', () => {
+    noteImgFs.classList.remove('deactivate')
+    xIcon.classList.remove('deactivate')
+})
+xIcon.addEventListener('click', () => {
+    noteImgFs.classList.add('deactivate')
+    xIcon.classList.add('deactivate')
 })
 
 // Sets img source 
@@ -126,3 +137,9 @@ const setActive = (button) => {
         }
     }
 }
+
+const cStatus = () => {
+    console.log(checkStatus)
+}
+
+//Fullscreen option for the image itself.

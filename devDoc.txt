@@ -1,0 +1,16 @@
+Todo list for notecard application:
+
+
+Move the Random button. Possibly to the side of the entire display so 
+that it is usable during fullscreen mode.
+
+Create better images to use for both clefs.
+
+Create the actual functionality to switch between Treble/Bass.
+
+
+
+
+STRETCH
+Design better checkmarks. Draw a square on the screan and use a font awesome
+check mark.  

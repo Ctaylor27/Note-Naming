@@ -10,15 +10,17 @@ body {
 #container {
     background: #E6EBE0;
     width: 50vw;
-    height: 50vh;
+    height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
 }
 
 h1{
     color: #5CA4A9;
+    padding-bottom: 50px;
 }
 
 #ui {
@@ -28,14 +30,48 @@ h1{
 }
 
 .uicontainer {
-    width: 30%;
+    width: 33%;
+    position: inherit;
+}
+
+.display {
+    height: 250px;
+    width: 100%;
+    transition: .5s;
+    
 }
 
 .noteImg {
-    height: 250px;
+    height: 100%;
     width: 100%;
-    position: relative;
-    left: auto;
+}
+
+.displayFs {
+    height: 600px;
+    width: 50vw;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    transition: .5s;
+    opacity: 100;
+    z-index: .5;
+}
+
+.fa-times {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color:#5CA4A9;
+    margin: 0;
+    font-size: 30px !important;
+    opacity: 1;
+    z-index: 5;
+    transition: .5s;
+    -webkit-transform: translateZ(0);
+}
+.deactivate {
+    z-index: -1;
+    opacity: 0;
 }
 
 .checkContainer {
