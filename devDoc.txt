@@ -14,3 +14,7 @@ Create the actual functionality to switch between Treble/Bass.
 STRETCH
 Design better checkmarks. Draw a square on the screan and use a font awesome
 check mark.  
+
+
+
+Select which mode. Draw UI based on mode. Draw Image based on mode. Default to BC.

@@ -16,6 +16,8 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
+    border-radius: 15px;
+
 }
 
 h1{
@@ -55,6 +57,7 @@ h1{
     transition: .5s;
     opacity: 100;
     z-index: .5;
+    border-radius: 15px;
 }
 
 .fa-times {
