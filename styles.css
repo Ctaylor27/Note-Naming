@@ -1,14 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+}
+
 body {
     height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #5CA4A9;
+    background: #f3f3f3;
 }
 
 #container {
-    background: #E6EBE0;
+    background: #dadada;
     width: 50vw;
     height: 600px;
     display: flex;
@@ -21,7 +28,7 @@ body {
 }
 
 h1{
-    color: #5CA4A9;
+    color: black;
     padding-bottom: 50px;
 }
 
@@ -54,25 +61,25 @@ h1{
     position: absolute;
     right: 0px;
     top: 0;
-    transition: .5s;
+    transition: 1s ease;
     opacity: 100;
-    z-index: .5;
+    z-index: 1;
     border-radius: 15px;
+    transform: translateY(0);
 }
-
 .fa-times {
     position: absolute;
     top: 10px;
     right: 10px;
-    color:#5CA4A9;
+    color:#C40404;
     margin: 0;
     font-size: 30px !important;
     opacity: 1;
     z-index: 5;
-    transition: .5s;
-    -webkit-transform: translateZ(0);
+    transition: 1s ease;
 }
 .deactivate {
+    transform: translateY(-600px);
     z-index: -1;
     opacity: 0;
 }
@@ -90,7 +97,7 @@ h1{
 .check {
     width: 50px;
     height: 50px;
-    color: #5CA4A9;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,27 +112,37 @@ h1{
     flex-direction: column;
 }
 
+.modeButtons {
+    margin-bottom: 25px;
+}
+
+#fullscreen {
+    width: 200px;
+}
 .controls {
     height: 50px;
     width: 100px;
-    background: #5CA4A9;
-    color: #E6EBE0;
+    background: #f3f3f3;
+    color: black;
     border: none;
     border-radius: 10px;
     transition: .15s;
     margin: 5px;
 }
 
+.active {
+    background-color: #60E044;
+    color: white;
+}
+
 .inactive {
-    background: #E6EBE0;
-    color: #5CA4A9;
+    background: #f3f3f3;
+    color: black;
     transition: .15s;
-    border: 1px solid #5CA4A9;
+    border: none;
 }
 
 #random:hover {
-    background: #E6EBE0;
-    color: #5CA4A9;
     transition: .15s;
-    border: 1px solid #5CA4A9;
+    border: 1px solid black;
 }
