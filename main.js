@@ -62,18 +62,36 @@ const updateImg = () => {
     document.querySelector('h3').innerText = keys[selection].split('')[0]
 }
 
+const checkBoxesEvent = (mode) => {
+    console.log('fired')
+    for (i = 0; i < checkBoxes.length; i++){
+        checkBoxes[i].addEventListener('change', (e) => {
+            console.log(images[mode][e.target.name])
+            if (images[mode][e.target.name]){
+                images[mode][e.target.name] = false
+                console.log(images[mode][e.target.name])
+            } else if (!images[mode][e.target.name]){
+                images[mode][e.target.name] = true
+                console.log(images[mode][e.target.name])
+            }
+        })
+    }
+}
+
 const setActive = (button) => {
     if (button.className == 'controls inactive'){
         if(button.id == 'Treble'){
             trebleButton.className = 'controls active'
             bassButton.className = 'controls inactive'
             mode = 'tc'
-            drawChecks()
+            checkBoxes = drawChecks()
+            checkBoxesEvent(mode)
         } else {
             trebleButton.className = 'controls inactive'
             bassButton.className = 'controls active'
             mode = 'bc'
-            drawChecks()
+            checkBoxes = drawChecks()
+            checkBoxesEvent(mode)
         }
         updateImg()
     }
@@ -111,23 +129,15 @@ const drawChecks = () => {
         check.append(input)
         checkContainer.append(check)
     }
+    return document.querySelectorAll('.checkbox')
 }
+let checkBoxes = drawChecks()
 
-drawChecks()
+
 // Add event listener to checkboxes
-const checkBoxes = document.querySelectorAll('.checkbox')
-for (i = 0; i < checkBoxes.length; i++){
-    checkBoxes[i].addEventListener('change', (e) => {
-        console.log(images[mode][e.target.name])
-        if (images[mode][e.target.name]){
-            images[mode][e.target.name] = false
-            console.log(images[mode][e.target.name])
-        } else if (!images[mode][e.target.name]){
-            images[mode][e.target.name] = true
-            console.log(images[mode][e.target.name])
-        }
-    })
-}
+
+
+checkBoxesEvent(mode)
 
 //Fullscreen option for the image itself.
 
