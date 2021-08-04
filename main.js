@@ -59,6 +59,7 @@ const updateImg = () => {
     let selection = setImg(currentSelection)
     noteImg.src = "imgs/" + mode + "imgs/" + keys[selection] + mode + ".png"
     noteImgFs.src = "imgs/" + mode + "imgs/" + keys[selection] + mode + ".png"
+    document.querySelector('h3').innerText = keys[selection].split('')[0]
 }
 
 const setActive = (button) => {

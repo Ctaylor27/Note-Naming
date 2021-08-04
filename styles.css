@@ -61,7 +61,7 @@ h1{
     width: 50vw;
     position: absolute;
     right: -323px;
-    top: -220px;
+    top: -210px;
     transition: 1s ease;
     opacity: 100;
     z-index: 1;
@@ -70,7 +70,7 @@ h1{
 }
 .fa-times {
     position: absolute;
-    top: -215px;
+    top: -205px;
     right: -315px;
     color:#C40404;
     margin: 0;
@@ -143,6 +143,10 @@ h1{
     border: none;
 }
 
+#studyDisplay {
+    margin-top: 25px;
+}
+
 #random {
     position: absolute;
     top: 595px;
@@ -155,6 +159,5 @@ h1{
 
 #random:hover {
     background: #dadada;
-
-    
+ 
 }
