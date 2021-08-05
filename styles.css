@@ -7,7 +7,6 @@
 
 body {
     height: 100vh;
-    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,6 +47,8 @@ h1{
     height: 250px;
     width: 100%;
     transition: .5s;
+    position: relative;
+    display: flex;
     
 }
 
@@ -58,9 +59,9 @@ h1{
 
 .displayFs {
     height: 600px;
-    width: 50vw;
+    /* width: 100%; */
     position: absolute;
-    right: -323px;
+    right: -23rem;
     top: -210px;
     transition: 1s ease;
     opacity: 100;
