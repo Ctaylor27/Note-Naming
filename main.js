@@ -1,4 +1,5 @@
-const body = document.body
+const app = () => {
+    const body = document.body
 const noteImg = document.querySelector(".noteImg")
 const noteImgFs = document.querySelector('.displayFs')
 const checkContainer = document.querySelector(".checkContainer")
@@ -63,16 +64,12 @@ const updateImg = () => {
 }
 
 const checkBoxesEvent = (mode) => {
-    console.log('fired')
     for (i = 0; i < checkBoxes.length; i++){
         checkBoxes[i].addEventListener('change', (e) => {
-            console.log(images[mode][e.target.name])
             if (images[mode][e.target.name]){
                 images[mode][e.target.name] = false
-                console.log(images[mode][e.target.name])
             } else if (!images[mode][e.target.name]){
                 images[mode][e.target.name] = true
-                console.log(images[mode][e.target.name])
             }
         })
     }
@@ -167,3 +164,6 @@ xIcon.addEventListener('click', () => {
     noteImgFs.classList.add('deactivate')
     xIcon.classList.add('deactivate')
 })
+}
+
+app()
