@@ -15,8 +15,8 @@ body {
 
 #container {
     background: #dadada;
-    width: 50vw;
-    height: 600px;
+    width: 60rem;
+    height: 40rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,6 +43,10 @@ h1{
     position: inherit;
 }
 
+.instruction {
+    margin-top: 1rem;
+}
+
 .display {
     height: 250px;
     width: 100%;
@@ -58,11 +62,11 @@ h1{
 }
 
 .displayFs {
-    height: 600px;
-    /* width: 100%; */
+    width: 60rem;
+    height: 40rem;
     position: absolute;
-    right: -23rem;
-    top: -210px;
+    left: 0;
+    top: 0;
     transition: 1s ease;
     opacity: 100;
     z-index: 1;
@@ -71,14 +75,18 @@ h1{
 }
 .fa-times {
     position: absolute;
-    top: -205px;
-    right: -315px;
-    color:#C40404;
+    top: 0px;
+    right: 0px;
+    color:#850404;
     margin: 0;
     font-size: 30px !important;
     opacity: 1;
     z-index: 5;
     transition: 1s ease;
+    
+}
+.fa-times:hover {
+    color: #c40303;
 }
 .deactivate {
     transform: translateY(-600px);
@@ -105,7 +113,9 @@ h1{
     align-items: center;
 }
 
-
+input {
+    accent-color: #850404;
+}
 
 #buttoncontainer {
     display: flex;
@@ -133,7 +143,7 @@ h1{
 }
 
 .active {
-    background-color: #60E044;
+    background-color: #850404;
     color: white;
 }
 
