@@ -23,7 +23,8 @@ body {
     align-items: center;
     position: absolute;
     border-radius: 10px 10px 0 0;
-
+    /* border: 1px solid red; */
+    /* overflow: hidden; */
 }
 
 h1{
@@ -63,7 +64,7 @@ h1{
 
 .displayFs {
     width: 60rem;
-    height: 40rem;
+    height: 37.45rem;
     position: absolute;
     left: 0;
     top: 0;
